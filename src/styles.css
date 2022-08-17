@@ -1,0 +1,196 @@
+@font-face {
+    font-family: DynaPuffFuenteCustom;
+    src: url(assets/fonts/DynaPuff/static/DynaPuff/DynaPuff-Regular.ttf);
+}
+
+@font-face {
+    font-family: SilkScreenCustom;
+    src: url(assets/fonts/Silkscreen/Silkscreen-Regular.ttf);
+}
+
+*{/*0 margenes por fuera y por dentro de cada elemento html*/
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    margin: 0;
+    background-color: #4d82c4;
+    font-family: DynaPuffFuenteCustom, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;/*De flexbox, es mas sencillo, es una nueva forma de hacer maquetacion web. Ver clase 143*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 150px;
+    /*margin: 0px auto;*//*centro el header*/
+    /*border: 1px solid black;*/
+}
+/*display none, oculta un elemento*/
+h1 {
+    /*font-family: 'DynaPuff', cursive;*/
+    font-size: 50px;
+    /*border: 1px solid red;*/
+    
+}
+
+hr {/*con flex desaparece, es por eso que le doy un ancho de 20%*/
+    width: 20%;
+  align-self: center;/* Esto se ve en la clase de bootstrap */
+}
+
+h2 {
+    font-size: 25px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;/*para que ningun div con clase caja-perro se salga de este section*/
+    font-family: SilkScreenCustom;
+    font-size: 30px;
+}
+
+
+#num-errores {
+    display: block;
+    margin: 100px;
+    height: 50px;
+    line-height: 50px;
+
+}
+
+/*Prueba*/
+.animacion-num-errores{
+    animation-name: turn-on-error;
+    animation-duration: 1s;
+    animation-iteration-count: 1;/*solo 1 vez*/
+    animation-timing-function: linear;
+}
+
+@keyframes turn-on-error {
+    0%{
+        border: none;
+        box-shadow: none;
+    }
+
+    50%{
+        border: 5px solid rgb(139, 26, 26);
+        box-shadow: 5px 5px 5px red;
+        background: red;
+    }
+
+    100%{
+        border: none;
+        box-shadow: none;
+    }
+} 
+
+
+
+#espacio-juego {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;/*para que ningun div con clase caja-perro se salga de este section*/
+    justify-content: space-around;
+    /*border: 1px solid green;*/
+    font-family: SilkScreenCustom, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+/*checar clase 33 viene sobre como hacer que un h1 se comporte como una caja*/
+/*.img-perro {
+    width: 150px;
+    
+}*/
+
+.caja-perro {/*este div contendra a la imagen carta, flip*/
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 15px 15px black;/*en horizontal, sobra de 5px, en vertical 0, en el fondo 0*/
+    
+    /*margin: 10px;*/
+    /*width: 150px;*/
+    
+}
+
+/*PUEDE QUE ESTO DE ABAJO este mal*/
+.front, .back, .caja-perro {
+    width: 135px;
+    height: 190px;
+    border-radius: 10px;
+    
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.back {
+    z-index: 2;
+    transition: all 0.3s linear;
+}
+.front {
+    transition: all 0.3s linear;
+    transform: rotateY(180deg);
+}
+.caja-perro {
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/*.caja-perro:hover .back {
+    transform: rotateY(180deg);
+}
+.caja-perro:hover .front {
+    transform: rotateY(360deg);
+}*/
+
+.click-hide-back {
+    transform: rotateY(180deg);
+}
+.click-show-front {
+    transform: rotateY(360deg);
+}
+.pantalla-bloqueada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(44, 44, 72, 0.75);
+    z-index: 5;
+    display: none;
+}
+
+.pantalla-mostrada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(44, 44, 72, 0.75);
+    z-index: 5;
+}
+
+#mensaje-final {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    color: white;
+    z-index: 10;
+    text-align: center;
+    margin: 32rem 0;
+    
+}
+    
+
+/*Recurso: https://www.lawebdelprogramador.com/codigo/CSS/6939-Efecto-de-girar-una-carta-con-CSS3.html*/
