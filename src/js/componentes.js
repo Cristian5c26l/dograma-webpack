@@ -150,10 +150,10 @@ const crearEspacioJuegoHTML = () => {
         div.classList.add('caja-perro');
 
         div.innerHTML = `
-            <img class=front src=../assets/img/${ carta.value }.jpg
+            <img class=front src=./assets/img/${ carta.value }.jpg
                  
              />
-             <img class=back src=../assets/img/back-card.jpg
+             <img class=back src=./assets/img/back-card.jpg
                  
              />
         `;
