@@ -53,6 +53,7 @@ h2 {
     flex-wrap: wrap;/*para que ningun div con clase caja-perro se salga de este section*/
     font-family: SilkScreenCustom;
     font-size: 30px;
+    height: 150px;
 }
 
 
@@ -99,7 +100,6 @@ h2 {
     justify-content: space-around;
     /*border: 1px solid green;*/
     font-family: SilkScreenCustom, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
 }
 
 /*checar clase 33 viene sobre como hacer que un h1 se comporte como una caja*/
@@ -194,3 +194,247 @@ h2 {
     
 
 /*Recurso: https://www.lawebdelprogramador.com/codigo/CSS/6939-Efecto-de-girar-una-carta-con-CSS3.html*/
+
+/*Responsive*/
+/*Desde la anchura 0px hasta 346px de la pantalla, ejecutar los estilos especificados*/
+
+@media ( max-width: 959px ) {
+    .caja-perro {/*este div contendra a la imagen carta, flip*/
+        margin-right: 35px;
+        margin-left: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow: 1px 11px 11px black;/*en horizontal, sobra de 5px, en vertical 0, en el fondo 0*/
+        
+    }
+
+    .front, .back, .caja-perro {
+        /*width: 45px;
+        height: 100px;*/
+        width: 90px;
+        height: 145px;
+        
+    }
+
+    header {
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #footer {
+        font-size: 25px;
+        height: 100px;
+    }
+    
+    
+    #num-errores {
+        margin: 0px auto;
+        margin-top: 80px;
+        height: 50px;
+        line-height: 50px;
+        
+    }
+
+}
+
+@media ( max-width: 839px ) {
+    .caja-perro {/*este div contendra a la imagen carta, flip*/
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow: 1px 11px 11px black;/*en horizontal, sobra de 5px, en vertical 0, en el fondo 0*/
+        
+    }
+
+    .front, .back, .caja-perro {
+        /*width: 45px;
+        height: 100px;*/
+        width: 80px;
+        height: 135px;
+        
+    }
+
+    header {
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #footer {
+        font-size: 25px;
+        height: 100px;
+    }
+    
+    
+    #num-errores {
+        margin: 0px auto;
+        margin-top: 80px;
+        height: 50px;
+        line-height: 50px;
+        
+    }
+
+}
+
+
+@media ( max-width: 689px ) {
+    .caja-perro {/*este div contendra a la imagen carta, flip*/
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 11px 11px black;/*en horizontal, sobra de 5px, en vertical 0, en el fondo 0*/
+        
+    }
+
+    .front, .back, .caja-perro {
+        /*width: 45px;
+        height: 100px;*/
+        width: 65px;
+        height: 120px;
+        
+    }
+
+    header {
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #footer {
+        font-size: 25px;
+        height: 100px;
+    }
+    
+    
+    #num-errores {
+        margin: 0px auto;
+        margin-top: 80px;
+        height: 50px;
+        line-height: 50px;
+        
+    }
+
+}
+
+
+@media ( max-width: 549px ) {
+    .caja-perro {/*este div contendra a la imagen carta, flip*/
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 11px 11px black;/*en horizontal, sobra de 5px, en vertical 0, en el fondo 0*/
+        
+    }
+
+    .front, .back, .caja-perro {
+        /*width: 45px;
+        height: 100px;*/
+        width: 60px;
+        height: 115px;
+        
+    }
+
+    header {
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #footer {
+        font-size: 25px;
+        height: 100px;
+    }
+    
+    
+    #num-errores {
+        margin: 0px auto;
+        margin-top: 80px;
+        height: 50px;
+        line-height: 50px;
+        
+    }
+
+}
+
+@media ( max-width: 445px ) {
+
+    .caja-perro {/*este div contendra a la imagen carta, flip*/
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 10px 10px black;/*en horizontal, sobra de 5px, en vertical 0, en el fondo 0*/
+        
+    }
+
+    .front, .back, .caja-perro {
+        /*width: 45px;
+        height: 100px;*/
+        width: 50px;
+        height: 105px;
+        
+    }
+
+    header {
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    hr {
+        width: 75%;
+    }
+
+    #footer {
+        font-size: 20px;
+        height: 100px;
+    }
+    
+    
+    #num-errores {
+        margin: 0px auto;
+        margin-top: 70px;
+        height: 20px;
+        line-height: 20px;
+        
+    }
+}
+
+@media ( max-width: 705px ) {
+    
+
+}
